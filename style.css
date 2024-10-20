@@ -146,6 +146,7 @@ footer {
   margin-top: var(--spacing-300);
   display: flex;
   align-items: center;
+  font-size: clamp(var(--font-size-xsmall), 3.2vw, var(--font-size-small));
 }
 
 footer img {
