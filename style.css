@@ -1,0 +1,153 @@
+/* CSS Reset */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* Variables */
+
+@font-face {
+  font-family: 'Figtree-ExtraBold';
+  src: url("./assets/fonts/static/Figtree-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Figtree-SemiBold';
+  src: url("./assets/fonts/static/Figtree-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Figtree-variable';
+  src: url("./assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+}
+
+
+:root {
+  /* Colors */
+  --color-yellow: #F4D04E;
+  --color-gray-950: #111;
+  --color-gray-500: #6B6B6B;
+  --color-white: #fff;
+  --color-black: #000;
+
+  /* Fonts */
+  --font-family-primary: 'Figtree-ExtraBold', sans-serif;
+  --font-family-secondary: 'Figtree-SemiBold', sans-serif;
+  --font-family-basic: 'Figtree-variable', sans-serif;
+
+  /* Font Sizes */
+  --font-size-xlarge: 24px;
+  --font-size-large: 20px;
+  --font-size-medium: 16px;
+  --font-size-small: 14px;
+  --font-size-xsmall: 12px;
+  --font-weight-extrabold: 800;
+
+  /* Design */
+  --border-radius-card: 20px; 
+  --border-radius-img: 10px; 
+  --border-radius-tag: 4px; 
+
+  /* Spacing */
+  --spacing-50: 4px;
+  --spacing-100: 8px;
+  --spacing-150: 12px;
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+}
+
+body {
+  background-color: var(--color-yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: var(--font-family-primary);
+  color: var(--color-gray-950);
+}
+
+.card {
+  border: 1px solid var(--color-gray-950);
+  border-radius: var(--border-radius-card);
+  max-width: 384px;
+  margin: var(--spacing-300);
+  padding: var(--spacing-300);
+  box-shadow: 8px 8px 0 var(--color-black);
+  background-color: var(--color-white);
+}
+
+.card img {
+  border-radius: var(--border-radius-img);
+}
+
+.tag {
+  font-weight: var(--font-weight-extrabold);
+  font-size: clamp(var(--font-size-xsmall), 3.2vw, var(--font-size-small));
+  padding: var(--spacing-50) var(--spacing-150);
+  background-color: var(--color-yellow);
+  border-radius: var(--border-radius-tag);
+  margin-top: var(--spacing-300);
+  display: inline-block;
+}
+
+.published {
+  color: inherit;
+  font-size: clamp(var(--font-size-xsmall), 3.2vw, var(--font-size-small));
+  font-family: var(--font-family-basic);
+  font-weight: 500;
+  margin-top: var(--spacing-150);
+}
+
+h1 {
+  font-size: clamp(var(--font-size-large), 5.33vw, var(--font-size-xlarge));
+  margin-top: var(--spacing-150);
+}
+
+p {
+  color: var(--color-gray-500);
+  font-family: var(--font-family-basic);
+  font-weight: 500;
+  font-size: clamp(var(--font-size-small), 3.73vw, var(--font-size-medium));
+  margin-top: var(--spacing-150);
+}
+
+footer {
+  margin-top: var(--spacing-300);
+  display: flex;
+  align-items: center;
+}
+
+footer img {
+  max-width: 32px;
+  margin-right: var(--spacing-150);
+}
+
+@media (max-width: 375px) {
+
+}
